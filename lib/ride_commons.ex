@@ -1,0 +1,2 @@
+defmodule RideCommons do
+end
