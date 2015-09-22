@@ -15,3 +15,7 @@ Based in JSX. Labels decoded as atoms by default.
 - decode_json!(body, opts)
 
 Read [JSX documentation](https://github.com/talentdeficit/exjsx) for details about supported options.
+
+### Ride.Commons.UUID
+
+- generate_uuid
