@@ -16,13 +16,13 @@ Based in JSX. Labels decoded as atoms by default.
 
 Read [JSX documentation](https://github.com/talentdeficit/exjsx) for details about supported options.
 
-### Ride.Commons.UUID
+### RideCommons.UUID
 
 UUIDv4 generation using `:crypto.rand_bytes`
 
 - generate_uuid
 
-### Ride.Commons.Naming
+### RideCommons.Naming
 
 Convenient functions for inflecting, copied from Mix.
 
