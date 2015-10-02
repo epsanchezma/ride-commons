@@ -14,7 +14,7 @@ defmodule RideCommons.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :exjsx]]
+    [applications: [:logger, :exjsx, :httpoison]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,7 @@ defmodule RideCommons.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:exjsx, "~> 3.2.0"}]
+    [{:exjsx, "~> 3.2.0"},
+    {:httpoison, "~> 0.7.3"}]
   end
 end
