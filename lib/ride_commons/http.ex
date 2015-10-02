@@ -39,15 +39,15 @@ defmodule RideCommons.HTTP do
   def delete!(url, headers) do
     process_response(HTTPoison.delete!(url, headers))
   end
-end
 
-defp process_response(response) do
-  case response do
-    {:ok, resp} -> {resp.status_code, resp.headers, resp.body}
-    {:error, error} -> {:error, error.reason}
+  defp process_response(response) do
+    case response do
+      {:ok, resp} -> {resp.status_code, resp.headers, resp.body}
+      {:error, error} -> {:error, error.reason}
+    end
   end
-end
 
-defp process_response!(response) do
-  {response.status_code, response.headers, response.body}
+  defp process_response!(response) do
+    {response.status_code, response.headers, response.body}
+  end
 end
