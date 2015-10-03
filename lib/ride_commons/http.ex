@@ -1,5 +1,4 @@
 defmodule RideCommons.HTTP do
-
   def get(url, headers) do
     process_response(HTTPoison.get(url, headers))
   end
@@ -8,12 +7,12 @@ defmodule RideCommons.HTTP do
     process_response(HTTPoison.get!(url, headers))
   end
 
-  def post(url, data, headers) do
-    process_response(HTTPoison.post(url, data, headers))
+  def post(url, body, headers) do
+    process_response(HTTPoison.post(url, body, headers))
   end
 
-  def post!(url, data, headers) do
-    process_response!(HTTPoison.post!(url, data, headers))
+  def post!(url, body, headers) do
+    process_response!(HTTPoison.post!(url, body, headers))
   end
 
   def put(url, body, headers) do
