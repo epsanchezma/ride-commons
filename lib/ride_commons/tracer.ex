@@ -11,7 +11,7 @@ defmodule RideCommons.Tracer do
     quote do
       Kernel.def(unquote(definition)) do
         start_time = :os.system_time(:micro_seconds)
-        IO.puts "==> call: #{Tracer.dump_defn(unquote(name), unquote(args))}"
+        IO.puts "==> call: #{RideCommons.Tracer.dump_defn(unquote(name), unquote(args))}"
         result = unquote(content)
         elapsed = :os.system_time(:micro_seconds) - start_time
         IO.puts "<== result: #{result}, elapsed time: #{elapsed} microseconds"
