@@ -1,4 +1,6 @@
 defmodule RideCommons.Tracer do
+  def dump_args(nil), do: ""
+
   def dump_args(args) do
     args |> Enum.map(&inspect/1) |> Enum.join(", ")
   end
