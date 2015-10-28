@@ -4,7 +4,7 @@ defmodule RideCommons.Tracer do
   end
 
   def dump_defn(name, args) do
-    "#{name}(#{dump_args(args)})"
+    "#{inspect(name)}(#{dump_args(args)})"
   end
 
   defmacro def(definition={name,_,args}, do: content) do
@@ -14,7 +14,7 @@ defmodule RideCommons.Tracer do
         IO.puts "==> call: #{RideCommons.Tracer.dump_defn(unquote(name), unquote(args))}"
         result = unquote(content)
         elapsed = :os.system_time(:micro_seconds) - start_time
-        IO.puts "<== result: #{result}, elapsed time: #{elapsed} microseconds"
+        IO.puts "<== result: #{inspect(result)}, elapsed time: #{inspect(elapsed)} microseconds"
         result
       end
     end
