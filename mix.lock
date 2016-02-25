@@ -3,4 +3,5 @@
   "httpoison": {:hex, :httpoison, "0.7.4"},
   "idna": {:hex, :idna, "1.0.2"},
   "jsx": {:hex, :jsx, "2.6.2"},
+  "retry": {:git, "https://github.com/ride/ElixirRetry.git", "5ce9938821f434b9705fe5bf55631fc8c0150401", []},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
