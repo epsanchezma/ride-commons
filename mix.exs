@@ -3,7 +3,7 @@ defmodule RideCommons.Mixfile do
 
   def project do
     [app: :ride_commons,
-     version: "0.1.0",
+     version: "1.0.0",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -14,7 +14,7 @@ defmodule RideCommons.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :exjsx, :httpoison]]
+    [applications: [:logger, :exjsx]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,8 +27,6 @@ defmodule RideCommons.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:exjsx, "~> 3.2.0"},
-    {:httpoison, "~> 0.7.3"},
-    {:retry, git: "https://github.com/ride/ElixirRetry.git"}]
+    [{:exjsx, "~> 3.2.0"}]
   end
 end
